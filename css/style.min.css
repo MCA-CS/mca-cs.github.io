@@ -1,3 +1,59 @@
+.down-button-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%
+}
+
+.down-button-div {
+  z-index: 2;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  width: 75px;
+  height: 75px;
+  animation: down-button-entry 2s ease, down-button-anim 2s infinite 2s;
+}
+
+.down-button-div img {
+  opacity: 0.4;
+}
+
+@keyframes down-button-entry {
+  0% {
+    bottom: -75px;
+  }
+
+  50% {
+    bottom: -75px;
+  }
+
+  100% {
+    bottom: 40px;
+  }
+}
+
+@keyframes down-button-anim {
+  0% {
+    bottom: 40px;
+  }
+
+  50% {
+    bottom: 40px;
+  }
+
+  75% {
+    bottom: 80px;
+  }
+
+  100% {
+    bottom: 40px;
+  }
+}
+
 .mcaic-logo {
   width: 500px;
   max-width: 100%;
@@ -79,7 +135,7 @@ table tr:hover {
 html,
 body {
   width: 100%;
-  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
